@@ -30,10 +30,18 @@ class QuoteManager: XMLParserDelegate {
         //let dataFolderURL = bundleURL.URLByAppendingPathComponent("quotefiles")
         let fileURL = bundleURL.URLByAppendingPathComponent("quotes.xml")
         parser = XMLParser(url: fileURL)
-        print(fileURL)
         parser.parse {
             //tableviewreloaddate hm, was hier wohl hinkommt?
         }
+        //here is a problem=====================
+        
+        //let klinger = parser.objects
+        //print("===========")
+        //print(klinger)
+        
+        //Er hatte dann hier:
+        //parser.objects[indexPath.row]["author"]
+        //parser.objects[indexPath.row]["text"]
     }
     
     func nextQuote() -> String{
