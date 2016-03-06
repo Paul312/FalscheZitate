@@ -9,17 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var quote = QuoteManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        updateQuoteLabel()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBOutlet weak var quoteLabel: UILabel!
+    
+    @IBAction func tappedButtonLeft(sender: AnyObject) {
+        quote.previousQuote()
+        updateQuoteLabel()
+        print(quote.getCount)
     }
-
-
+    
+    @IBAction func tappedButtonRight(sender: AnyObject) {
+        quote.nextQuote()
+        updateQuoteLabel()
+        print(quote.getCount)
+    }
+    
+    @IBAction func tappedButtonSettings(sender: AnyObject) {
+        print("open settings")
+    }
+    
+    func updateQuoteLabel(){
+        quoteLabel.text = quote.getCurrentQuote()
+    }
 }
 
