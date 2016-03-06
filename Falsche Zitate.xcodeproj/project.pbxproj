@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B16CCE51C8CA331003C14A3 /* quotationlist.xsd.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B16CCE31C8CA331003C14A3 /* quotationlist.xsd.xml */; };
+		3B16CCE61C8CA331003C14A3 /* quotes.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B16CCE41C8CA331003C14A3 /* quotes.xml */; };
+		3B16CCE81C8CA362003C14A3 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16CCE71C8CA362003C14A3 /* XMLParser.swift */; };
 		DA402F3A1C8C800B000F8F78 /* QuoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA402F391C8C800B000F8F78 /* QuoteManager.swift */; };
 		DA59BBE21C8B70A500912E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59BBE11C8B70A500912E11 /* AppDelegate.swift */; };
 		DA59BBE41C8B70A500912E11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59BBE31C8B70A500912E11 /* ViewController.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B16CCE31C8CA331003C14A3 /* quotationlist.xsd.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = quotationlist.xsd.xml; sourceTree = "<group>"; };
+		3B16CCE41C8CA331003C14A3 /* quotes.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = quotes.xml; sourceTree = "<group>"; };
+		3B16CCE71C8CA362003C14A3 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		DA402F391C8C800B000F8F78 /* QuoteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteManager.swift; sourceTree = "<group>"; };
 		DA59BBDE1C8B70A500912E11 /* Falsche Zitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Falsche Zitate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA59BBE11C8B70A500912E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +109,10 @@
 			children = (
 				DA59BBE11C8B70A500912E11 /* AppDelegate.swift */,
 				DA59BC0F1C8B790200912E11 /* Quote.swift */,
+				3B16CCE31C8CA331003C14A3 /* quotationlist.xsd.xml */,
+				3B16CCE41C8CA331003C14A3 /* quotes.xml */,
 				DA402F391C8C800B000F8F78 /* QuoteManager.swift */,
+				3B16CCE71C8CA362003C14A3 /* XMLParser.swift */,
 				DA59BBE31C8B70A500912E11 /* ViewController.swift */,
 				DA59BBE51C8B70A600912E11 /* Main.storyboard */,
 				DA59BBE81C8B70A600912E11 /* Assets.xcassets */,
@@ -239,6 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA59BBEC1C8B70A600912E11 /* LaunchScreen.storyboard in Resources */,
+				3B16CCE51C8CA331003C14A3 /* quotationlist.xsd.xml in Resources */,
+				3B16CCE61C8CA331003C14A3 /* quotes.xml in Resources */,
 				DA59BBE91C8B70A600912E11 /* Assets.xcassets in Resources */,
 				DA59BBE71C8B70A600912E11 /* Main.storyboard in Resources */,
 			);
@@ -269,6 +280,7 @@
 				DA59BC101C8B790200912E11 /* Quote.swift in Sources */,
 				DA402F3A1C8C800B000F8F78 /* QuoteManager.swift in Sources */,
 				DA59BBE21C8B70A500912E11 /* AppDelegate.swift in Sources */,
+				3B16CCE81C8CA362003C14A3 /* XMLParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

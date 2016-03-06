@@ -8,10 +8,14 @@
 
 import Foundation
 
-class QuoteManager {
+class QuoteManager: XMLParserDelegate {
     
     private var quotes = [Quote]()
     private var count = 0
+    let bundleURL = NSBundle.mainBundle().bundleURL
+    //let kURL = NSURL(string: "./quotefiles/quotes.xml")
+    
+    var parser : XMLParser
     
     var getCount: Int {
         get {
@@ -22,6 +26,13 @@ class QuoteManager {
     init(){
         for var i=0; i<=365; i++ {
             quotes.append(Quote(numOfQuote: i))
+        }
+        //let dataFolderURL = bundleURL.URLByAppendingPathComponent("quotefiles")
+        let fileURL = bundleURL.URLByAppendingPathComponent("quotes.xml")
+        parser = XMLParser(url: fileURL)
+        print(fileURL)
+        parser.parse {
+            //tableviewreloaddate hm, was hier wohl hinkommt?
         }
     }
     
@@ -60,5 +71,9 @@ class QuoteManager {
     func saveCurrentQuote(value: Int) {
         NSUserDefaults.standardUserDefaults().setValue(value, forKey: "savedValue")
         NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    func XMLParserError(parser: XMLParser, error: String) {
+        print("Error")
     }
 }
