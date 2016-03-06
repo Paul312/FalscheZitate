@@ -17,7 +17,7 @@ class Quote {
         get {
             return self.numOfQuote
         } set {
-            if quoteNumber >= 0 || quoteNumber <= 365 {
+            if quoteNumber >= 0 && quoteNumber <= 365 {
                 self.numOfQuote = quoteNumber
             }
         }
