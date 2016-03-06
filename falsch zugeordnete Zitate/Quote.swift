@@ -23,6 +23,14 @@ class Quote {
         }
     }
     
+    var getQuote: String {
+        return self.quote
+    }
+    
+    var getAuthor: String {
+        return self.author
+    }
+    
     init(numOfQuote: Int){
         self.numOfQuote = numOfQuote
     }

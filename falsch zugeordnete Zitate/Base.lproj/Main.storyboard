@@ -62,14 +62,14 @@
                                             <action selector="tappedButtonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahU-SJ-p3z"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMa-ob-irx">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMa-ob-irx">
                                         <rect key="frame" x="409" y="0.0" width="379" height="379"/>
                                         <state key="normal" image="button_settings"/>
                                         <connections>
                                             <action selector="tappedButtonSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9oM-gq-3FY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="so6-TO-dfR">
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="so6-TO-dfR">
                                         <rect key="frame" x="818" y="0.0" width="379" height="379"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="so6-TO-dfR" secondAttribute="height" multiplier="1:1" id="yT7-Rj-f6K"/>
