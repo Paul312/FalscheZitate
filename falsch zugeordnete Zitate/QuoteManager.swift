@@ -65,7 +65,7 @@ class QuoteManager: XMLParserDelegate {
         } else {
             count = 0
         }
-        return "\"Luki mach hinne, damit hier was vernünftiges drin steht xD \(count)\""
+        return "\(quotes.count)"
     }
     
     func saveCurrentQuote(value: Int) {
