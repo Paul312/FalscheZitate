@@ -204,7 +204,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Paul Huebner";
+				ORGANIZATIONNAME = Cappricorn;
 				TargetAttributes = {
 					DA59BBDD1C8B70A500912E11 = {
 						CreatedOnToolsVersion = 7.2.1;

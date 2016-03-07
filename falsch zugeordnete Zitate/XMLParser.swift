@@ -3,7 +3,7 @@
 //  Falsche Zitate
 //
 //  Created by Lukas Schramm on 06.03.16.
-//  Copyright © 2016 Paul Huebner. All rights reserved.
+//  Copyright © 2016 Cappricorn. All rights reserved.
 //
 
 import Foundation
@@ -88,6 +88,12 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     }
     
     func getQuote(num:Int) -> Quote {
-        return quotes[num]
+        if num < 0 {
+            return quotes[364]
+        } else if num > 364 {
+            return quotes[0]
+        } else {
+            return quotes[num]
+        }
     }
 }
