@@ -94,7 +94,7 @@
                                     <rect key="frame" x="0.0" y="650" width="400" height="113"/>
                                 </variation>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7c6-eE-Hud">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7c6-eE-Hud">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7c6-eE-Hud" secondAttribute="height" multiplier="228:289" id="MjC-Ai-Tiz"/>
@@ -129,7 +129,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HiQ-4P-ybT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HiQ-4P-ybT">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HiQ-4P-ybT" secondAttribute="height" multiplier="19:4" id="JsA-QO-Fct"/>
