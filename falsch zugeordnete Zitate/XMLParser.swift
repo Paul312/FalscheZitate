@@ -32,7 +32,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     func parse(handler: () -> Void) {
         self.handler = handler
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             //other Thread
             
             let xmlCode = NSData(contentsOfURL: self.url)
@@ -41,7 +41,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
             if !parser.parse() {
                 self.delegate?.XMLParserError(self, error: "Parsen fehlgeschlagen")
             }
-        }
+        //}
     }
     
     func parser(parser: NSXMLParser, parseErrorOccurred parseError: NSError) {
@@ -80,11 +80,11 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     }
     
     func parserDidEndDocument(parser: NSXMLParser) {
-        dispatch_async(dispatch_get_main_queue()) {
+        //dispatch_async(dispatch_get_main_queue()) {
             if (self.handler != nil) {
                 self.handler!()
             }
-        }
+       // }
     }
     
     func getQuote(num:Int) -> Quote {
