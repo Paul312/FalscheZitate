@@ -200,13 +200,10 @@
                                 <exclude reference="HiQ-4P-ybT"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="SYZ-3J-awS"/>
-                                <exclude reference="WGZ-4N-kNb"/>
-                                <exclude reference="nho-NQ-Xkk"/>
-                                <exclude reference="0al-XA-mHV"/>
-                                <exclude reference="MAx-1D-GpX"/>
-                                <exclude reference="twx-xv-hwC"/>
-                                <exclude reference="u6i-JL-Rvd"/>
+                                <exclude reference="AWE-Jh-NQv"/>
+                                <exclude reference="D9E-nN-hcO"/>
+                                <exclude reference="Dcr-cP-r3q"/>
+                                <exclude reference="TXj-SB-6U9"/>
                                 <exclude reference="3LB-8a-JLS"/>
                                 <exclude reference="H6R-iC-Mpz"/>
                                 <exclude reference="NoU-AX-pFq"/>
@@ -218,10 +215,13 @@
                                 <exclude reference="Rrm-pe-FAY"/>
                                 <exclude reference="cDl-mn-DeZ"/>
                                 <exclude reference="tWZ-OY-eu2"/>
-                                <exclude reference="D9E-nN-hcO"/>
-                                <exclude reference="Dcr-cP-r3q"/>
-                                <exclude reference="TXj-SB-6U9"/>
-                                <exclude reference="AWE-Jh-NQv"/>
+                                <exclude reference="SYZ-3J-awS"/>
+                                <exclude reference="WGZ-4N-kNb"/>
+                                <exclude reference="nho-NQ-Xkk"/>
+                                <exclude reference="0al-XA-mHV"/>
+                                <exclude reference="MAx-1D-GpX"/>
+                                <exclude reference="twx-xv-hwC"/>
+                                <exclude reference="u6i-JL-Rvd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -232,13 +232,10 @@
                                 <include reference="HiQ-4P-ybT"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="SYZ-3J-awS"/>
-                                <include reference="WGZ-4N-kNb"/>
-                                <include reference="nho-NQ-Xkk"/>
-                                <include reference="0al-XA-mHV"/>
-                                <include reference="MAx-1D-GpX"/>
-                                <include reference="twx-xv-hwC"/>
-                                <include reference="u6i-JL-Rvd"/>
+                                <include reference="AWE-Jh-NQv"/>
+                                <include reference="D9E-nN-hcO"/>
+                                <include reference="Dcr-cP-r3q"/>
+                                <include reference="TXj-SB-6U9"/>
                                 <exclude reference="3LB-8a-JLS"/>
                                 <include reference="H6R-iC-Mpz"/>
                                 <exclude reference="NoU-AX-pFq"/>
@@ -250,10 +247,13 @@
                                 <exclude reference="Rrm-pe-FAY"/>
                                 <include reference="cDl-mn-DeZ"/>
                                 <include reference="tWZ-OY-eu2"/>
-                                <include reference="D9E-nN-hcO"/>
-                                <include reference="Dcr-cP-r3q"/>
-                                <include reference="TXj-SB-6U9"/>
-                                <include reference="AWE-Jh-NQv"/>
+                                <include reference="SYZ-3J-awS"/>
+                                <include reference="WGZ-4N-kNb"/>
+                                <include reference="nho-NQ-Xkk"/>
+                                <include reference="0al-XA-mHV"/>
+                                <include reference="MAx-1D-GpX"/>
+                                <include reference="twx-xv-hwC"/>
+                                <include reference="u6i-JL-Rvd"/>
                             </mask>
                         </variation>
                     </view>

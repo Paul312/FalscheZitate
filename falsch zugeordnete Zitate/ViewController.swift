@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     func updateLabels(){
-        quoteLabel.text = "\"quote.parser.getQuote(quote.count).getQuote\""
+        quoteLabel.text = "\"\(quote.parser.getQuote(quote.count).getQuote)\""
         authorLabel.text = "- \(quote.parser.getQuote(quote.count).getAuthor) -"
     }
 }
