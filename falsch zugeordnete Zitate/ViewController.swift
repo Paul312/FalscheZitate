@@ -15,9 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _ = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "gimmeThatTime", userInfo: nil, repeats: false)
-        
-        quote.getCurrentQuote()
+        //quote.getCurrentQuote()
         updateLabels()
     }
     
