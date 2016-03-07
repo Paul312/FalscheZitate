@@ -3,7 +3,7 @@
 //  falsch zugeordnete Zitate
 //
 //  Created by Paul Huebner on 05.03.16.
-//  Copyright © 2016 Paul Huebner. All rights reserved.
+//  Copyright © 2016 Cappricorn. All rights reserved.
 //
 
 import UIKit

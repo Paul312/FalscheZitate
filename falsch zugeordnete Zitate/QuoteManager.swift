@@ -3,7 +3,7 @@
 //  Falsche Zitate
 //
 //  Created by Paul Huebner on 06.03.16.
-//  Copyright © 2016 Paul Huebner. All rights reserved.
+//  Copyright © 2016 Cappricorn. All rights reserved.
 //
 
 import Foundation
@@ -29,36 +29,34 @@ class QuoteManager: XMLParserDelegate {
         }
     }
     
-    func nextQuote() -> String {
+    func nextQuote() {
         self.count++
         count = outOfRange(count)
         saveCurrentQuote(count)
-        return getCurrentQuote()
     }
     
-    func previousQuote() -> String {
+    func previousQuote() {
         self.count--
         count = outOfRange(count)
         saveCurrentQuote(count)
-        return getCurrentQuote()
     }
     
     func outOfRange(count:Int) -> Int {
         if count < 0 {
-            return 365
-        } else if count > 365 {
+            return 364
+        } else if count > 364 {
             return 0
         } else {
             return count
         }
     }
-    func getCurrentQuote() -> String {
+    
+    func getCurrentQuote() {
         if let savedValue = NSUserDefaults.standardUserDefaults().valueForKey("savedValue") as? Int {
             count = savedValue
         } else {
             count = 0
         }
-        return "\(parser.quotes.count)"
     }
     
     func saveCurrentQuote(value: Int) {
