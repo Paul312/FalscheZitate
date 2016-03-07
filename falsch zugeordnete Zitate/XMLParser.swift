@@ -16,10 +16,12 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     let url: NSURL
     var delegate: XMLParserDelegate?
     
-    var objects = [Dictionary<String,String>]()
-    var object = Dictionary<String, String>()
-    var inItem = false
-    var current = String()
+    var quotetext : String = ""
+    var author : String = ""
+    var quotes = [Quote]()
+    
+    var elements = NSMutableDictionary()
+    var element = NSString()
     
     var handler: (() -> Void)?
     
@@ -31,7 +33,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         self.handler = handler
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            // Anderer Thread
+            //other Thread
             
             let xmlCode = NSData(contentsOfURL: self.url)
             let parser = NSXMLParser(data: xmlCode!)
@@ -46,38 +48,34 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         delegate?.XMLParserError(self, error: parseError.localizedDescription)
     }
     
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributesDict: [NSObject : AnyObject]!) {
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+        element = elementName
         if elementName == "quote" {
-            object.removeAll(keepCapacity: false)
-            inItem = true
-        } else {
-            //print("Klinger")
+            elements = [:]
+            author = ""
+            quotetext = ""
         }
-        current = elementName
     }
     
     func parser(parser: NSXMLParser, foundCharacters string: String) {
-        print(string)
-        if !inItem {
-            return
-        }
-        if let temp = object[current] {
-            var tempString = temp
-            tempString += string
-            object[current] = tempString
-            //print("Sven: \(string)")
-        } else {
-            object[current] = string
-            //print("Unfug")
+        if element == "author" {
+            let trimmed = string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            author += trimmed
+        } else if element == "text" {
+            let trimmed = string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            quotetext += trimmed
         }
     }
     
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if elementName == "quote" {
-            inItem = false
-            objects.append(object)
-            //print("Klinger")
-            //print(object)
+        if (elementName as NSString).isEqualToString("quote") {
+            if !author.isEqual(nil) {
+                elements.setObject(author, forKey: "author")
+            }
+            if !quotetext.isEqual(nil) {
+                elements.setObject(quotetext, forKey: "text")
+            }
+            quotes.append(Quote(numOfQuote: quotes.count, quote: elements["text"]! as! String, author: elements["author"]! as! String))
         }
     }
     
@@ -87,5 +85,9 @@ class XMLParser: NSObject, NSXMLParserDelegate {
                 self.handler!()
             }
         }
+    }
+    
+    func getQuote(num:Int) -> Quote {
+        return quotes[num]
     }
 }

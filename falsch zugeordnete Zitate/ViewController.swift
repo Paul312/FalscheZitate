@@ -23,13 +23,11 @@ class ViewController: UIViewController {
     @IBAction func tappedButtonLeft(sender: AnyObject) {
         quote.previousQuote()
         updateQuoteLabel()
-        print(quote.getCount)
     }
     
     @IBAction func tappedButtonRight(sender: AnyObject) {
         quote.nextQuote()
         updateQuoteLabel()
-        print(quote.getCount)
     }
     
     @IBAction func tappedButtonSettings(sender: AnyObject) {
@@ -37,7 +35,6 @@ class ViewController: UIViewController {
     }
     
     func updateQuoteLabel(){
-        quoteLabel.text = quote.getCurrentQuote()
+        quoteLabel.text = quote.parser.getQuote(quote.count).getQuote
     }
 }
-
