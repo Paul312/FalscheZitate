@@ -17,7 +17,7 @@ class Quote {
         get {
             return self.numOfQuote
         } set {
-            if quoteNumber >= 0 || quoteNumber <= 365 {
+            if quoteNumber >= 0 && quoteNumber <= 365 {
                 self.numOfQuote = quoteNumber
             }
         }
@@ -31,14 +31,9 @@ class Quote {
         return self.author
     }
     
-    init(numOfQuote: Int){
+    init(numOfQuote: Int, quote: String, author: String) {
         self.numOfQuote = numOfQuote
+        self.quote = quote
+        self.author = author
     }
-    
-    //This class would need a function to read the quotes from the xml document
 }
-
-
-
-
-

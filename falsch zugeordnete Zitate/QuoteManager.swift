@@ -10,10 +10,8 @@ import Foundation
 
 class QuoteManager: XMLParserDelegate {
     
-    private var quotes = [Quote]()
-    private var count = 0
+    var count = 0
     let bundleURL = NSBundle.mainBundle().bundleURL
-    //let kURL = NSURL(string: "./quotefiles/quotes.xml")
     
     var parser : XMLParser
     
@@ -23,35 +21,22 @@ class QuoteManager: XMLParserDelegate {
         }
     }
     
-    init(){
-        for var i=0; i<=365; i++ {
-            quotes.append(Quote(numOfQuote: i))
-        }
-        //let dataFolderURL = bundleURL.URLByAppendingPathComponent("quotefiles")
+    init() {
         let fileURL = bundleURL.URLByAppendingPathComponent("quotes.xml")
         parser = XMLParser(url: fileURL)
         parser.parse {
-            //tableviewreloaddate hm, was hier wohl hinkommt?
+            //nothing
         }
-        //here is a problem=====================
-        
-        //let klinger = parser.objects
-        //print("===========")
-        //print(klinger)
-        
-        //Er hatte dann hier:
-        //parser.objects[indexPath.row]["author"]
-        //parser.objects[indexPath.row]["text"]
     }
     
-    func nextQuote() -> String{
+    func nextQuote() -> String {
         self.count++
         count = outOfRange(count)
         saveCurrentQuote(count)
         return getCurrentQuote()
     }
     
-    func previousQuote() -> String{
+    func previousQuote() -> String {
         self.count--
         count = outOfRange(count)
         saveCurrentQuote(count)
@@ -59,7 +44,7 @@ class QuoteManager: XMLParserDelegate {
     }
     
     func outOfRange(count:Int) -> Int {
-        if count < 0{
+        if count < 0 {
             return 365
         } else if count > 365 {
             return 0
@@ -68,12 +53,12 @@ class QuoteManager: XMLParserDelegate {
         }
     }
     func getCurrentQuote() -> String {
-        if let savedValue = NSUserDefaults.standardUserDefaults().valueForKey("savedValue") as? Int{
+        if let savedValue = NSUserDefaults.standardUserDefaults().valueForKey("savedValue") as? Int {
             count = savedValue
         } else {
             count = 0
         }
-        return "\(quotes.count)"
+        return "\(parser.quotes.count)"
     }
     
     func saveCurrentQuote(value: Int) {
