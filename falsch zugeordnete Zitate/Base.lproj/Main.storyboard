@@ -252,6 +252,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="authorLabel" destination="HiQ-4P-ybT" id="rPH-eS-WGC"/>
                         <outlet property="quoteLabel" destination="7c6-eE-Hud" id="a2l-Kq-N4E"/>
                     </connections>
                 </viewController>

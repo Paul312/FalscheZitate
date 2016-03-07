@@ -15,26 +15,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateQuoteLabel()
+        updateLabels()
     }
     
     @IBOutlet weak var quoteLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
     
     @IBAction func tappedButtonLeft(sender: AnyObject) {
         quote.previousQuote()
-        updateQuoteLabel()
+        updateLabels()
     }
     
     @IBAction func tappedButtonRight(sender: AnyObject) {
         quote.nextQuote()
-        updateQuoteLabel()
+        updateLabels()
     }
     
     @IBAction func tappedButtonSettings(sender: AnyObject) {
         print("open settings")
     }
     
-    func updateQuoteLabel(){
+    func updateLabels(){
         quoteLabel.text = quote.parser.getQuote(quote.count).getQuote
+        authorLabel.text = quote.parser.getQuote(quote.count).getAuthor
     }
 }
