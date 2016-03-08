@@ -30,7 +30,6 @@ class ViewController: UIViewController {
     @IBAction func tappedButtonLeft(sender: AnyObject) {
         quote.previousQuote()
         updateLabels()
-        print("let me commit please")
     }
     
     @IBAction func tappedButtonRight(sender: AnyObject) {
