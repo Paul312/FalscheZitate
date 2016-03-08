@@ -15,8 +15,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        quote.getCurrentQuote()
-        updateLabels()
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.quote.getCurrentQuote()
+            dispatch_async(dispatch_get_main_queue()) {
+                self.updateLabels()
+            }
+        }
     }
     
     @IBOutlet weak var quoteLabel: UILabel!
